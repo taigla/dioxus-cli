@@ -27,7 +27,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ env.REGISTRY }}/dioxus-cli
+        images: ${{ env.REGISTRY }}/${{ github.repository }}
 
     - name: Build and push web
       uses: docker/build-push-action@v5
